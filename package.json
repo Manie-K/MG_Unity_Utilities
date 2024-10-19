@@ -1,7 +1,11 @@
 {
     "name": "com.maciejgoralczyk.mgutilities",
-    "displayName": "My tools and utilities",
+    "displayName": "MG_Utilities",
     "version": "1.0.2",
     "description": "A package containing useful tools and utilities.",
-    "unity": "2022.3"
+    "unity": "2022.3",
+    "dependencies": {
+        "com.unity.cinemachine": "3.1.2",
+        "com.unity.inputsystem": "1.7.0"
+    }
 }
