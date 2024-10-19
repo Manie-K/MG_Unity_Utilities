@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace MG_Utilities
 {
+    /// <summary>
+    /// REMINDER: Always use "base.Awake()" in the Awake method!
+    /// </summary>
+    /// <typeparam name="T">Monobehaviour</typeparam>
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         public static T Instance { get; private set; }
@@ -26,6 +30,11 @@ namespace MG_Utilities
         }
     }
 
+    
+    /// <summary>
+    /// REMINDER: Always use "base.Awake()" in the Awake method!
+    /// </summary>
+    /// <typeparam name="T">Monobehaviour</typeparam>
     public abstract class SingletonPersistent<T> : Singleton<T> where T : MonoBehaviour
     {
         protected override void Awake()

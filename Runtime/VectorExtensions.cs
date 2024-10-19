@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MG_Utilities
 {
-    //author "git-amend"
+    //inspired from "git-amend" YouTube channel.
     public static class Vector3Extensions
     {
         public static Vector3 With(this Vector3 vector, float? x = null, float? y = null, float? z = null) 
@@ -26,15 +26,6 @@ namespace MG_Utilities
         public static Vector2 Add(this Vector3 vector, float? x = null, float? y = null)
         {
             return new Vector2(vector.x + (x ?? 0), vector.y + (y ?? 0));
-        }
-    }
-
-    public static class GameObjectExtensions
-    {
-        public static T GetOrAdd<T>(this GameObject gameObject) where T : Component
-        {
-            T component = gameObject.GetComponent<T>();
-            return component != null ? component : gameObject.AddComponent<T>();
         }
     }
 }

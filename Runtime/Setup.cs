@@ -9,12 +9,13 @@ namespace MG_Utilities
         [MenuItem("Tools/Setup/Create default folders")]
         public static void CreateDefaultFolders()
         {
-            Folders.CreateFolders("_Project", "_Scripts", "Materials", "Prefabs", "Settings", "Scenes");
-            Folders.CreateFolders("_Project/_Scripts", "ScriptableObjects");
+            FolderHelpers.CreateFolders("_Project", "_Scripts", "Materials", "Prefabs", 
+                "Settings", "Scenes", "Shaders");
+            FolderHelpers.CreateFolders("_Project/_Scripts", "ScriptableObjects");
             AssetDatabase.Refresh();
         }   
         
-        static class Folders
+        static class FolderHelpers
         {
             public static void CreateFolders(string root, params string[] folders) 
             {
