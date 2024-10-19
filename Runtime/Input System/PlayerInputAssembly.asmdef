@@ -1,10 +1,8 @@
 {
-    "name": "MG_Utilities",
-    "rootNamespace": "MG_Utilities",
+    "name": "PlayerInputAssembly",
+    "rootNamespace": "",
     "references": [
-        "GUID:4307f53044263cf4b835bd812fc161a4",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:7e8b15f33157eaa4d997e6179bd69988"
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
