@@ -10,7 +10,7 @@ namespace MG_Utilities
         public static void CreateDefaultFolders()
         {
             FolderHelpers.CreateFolders("_Project", "_Scripts", "Materials", "Prefabs", 
-                "Settings", "Scenes", "Shaders");
+                "Settings", "Scenes", "Shaders", "Meshes");
             FolderHelpers.CreateFolders("_Project/_Scripts", "ScriptableObjects");
             AssetDatabase.Refresh();
         }   
