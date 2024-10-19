@@ -15,6 +15,14 @@ namespace MG_Utilities
             AssetDatabase.Refresh();
         }   
         
+        [MenuItem("Tools/Setup/Import Unity Packages")]
+        public static void ImportUnityPackages()
+        {
+            PackageHelpers.AddPackage("com.unity.cinemachine");
+            PackageHelpers.AddPackage("com.unity.ai.navigation");
+        }
+        
+        
         static class FolderHelpers
         {
             public static void CreateFolders(string root, params string[] folders) 
@@ -36,6 +44,25 @@ namespace MG_Utilities
 
             }
         }
-    
+        static class PackageHelpers
+        {
+            public static void AddPackage(string packageName)
+            {
+                var request = UnityEditor.PackageManager.Client.Add(packageName);
+                while (!request.IsCompleted)
+                {
+                    System.Threading.Thread.Sleep(10);
+                }
+        
+                if (request.Status == UnityEditor.PackageManager.StatusCode.Success)
+                {
+                    Debug.Log($"Package '{packageName}' imported successfully.");
+                }
+                else if (request.Status >= UnityEditor.PackageManager.StatusCode.Failure)
+                {
+                    Debug.LogError($"Failed to import package '{packageName}': {request.Error.message}");
+                }
+            }
+        }
     }
 }
