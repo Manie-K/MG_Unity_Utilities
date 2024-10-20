@@ -22,7 +22,6 @@ namespace MG_Utilities
             PackageHelpers.AddPackage("com.unity.ai.navigation");
             PackageHelpers.AddPackage("com.unity.postprocessing");
             PackageHelpers.AddPackage("com.unity.inputsystem");
-            PackageHelpers.AddPackage("com.unity.textmeshpro");
         }
         
         
