@@ -25,9 +25,11 @@ namespace MG_Utilities
 
         protected virtual void OnApplicationQuit()
         {
-            Instance = null;
             if(gameObject != null)
+            {
+                Instance = null;
                 Destroy(gameObject);
+            }
         }
     }
 
